@@ -1,0 +1,16 @@
+replicaCount: 2
+image:
+  repository: "docker.io/myabhi04/stakater-ui-app"
+  tag: "3.0"
+  pullPolicy: Always
+  
+service:
+  type: LoadBalancer
+  port: 443
+  targetPort: 8081
+  timeoutSeconds: 5
+  periodSeconds: 15
+  protocol : TCP
+
+application:
+  name: "hellostakateruiapp"
